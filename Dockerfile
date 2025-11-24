@@ -13,7 +13,6 @@ RUN apt-get update -y && \
 
 COPY --from=easy-novnc-build /bin/easy-novnc /usr/local/bin/
 COPY supervisord.conf /etc/
-COPY menu.xml /etc/xdg/openbox/
 RUN echo 'hsetroot -solid "#123456" &' >> /etc/xdg/openbox/autostart
 RUN echo 'midori https://www.myandroid.org/run/start.php &' >> /etc/xdg/openbox/autostart
 
